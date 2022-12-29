@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GhJ-B4-qj8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beacon List View Controller-->
+        <scene sceneID="Ozx-gD-srE">
+            <objects>
+                <viewController storyboardIdentifier="BeaconListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GhJ-B4-qj8" customClass="BeaconListViewController" customModule="BLE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q6n-rm-RX9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEQ-ct-pIs">
+                                <rect key="frame" x="16" y="60" width="382" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cxg-0o-qoX">
+                                <rect key="frame" x="0.0" y="68" width="414" height="794"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P3M-6z-x8S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P3M-6z-x8S" firstAttribute="trailing" secondItem="WEQ-ct-pIs" secondAttribute="trailing" constant="16" id="G91-Y4-0Cs"/>
+                            <constraint firstItem="cxg-0o-qoX" firstAttribute="top" secondItem="WEQ-ct-pIs" secondAttribute="bottom" constant="8" id="HDB-Nd-v6F"/>
+                            <constraint firstItem="P3M-6z-x8S" firstAttribute="trailing" secondItem="cxg-0o-qoX" secondAttribute="trailing" id="MQj-Ov-NZB"/>
+                            <constraint firstItem="WEQ-ct-pIs" firstAttribute="top" secondItem="P3M-6z-x8S" secondAttribute="top" constant="16" id="dnN-vD-WfH"/>
+                            <constraint firstItem="WEQ-ct-pIs" firstAttribute="leading" secondItem="P3M-6z-x8S" secondAttribute="leading" constant="16" id="fvJ-8I-92j"/>
+                            <constraint firstItem="cxg-0o-qoX" firstAttribute="leading" secondItem="P3M-6z-x8S" secondAttribute="leading" id="sf3-2B-lws"/>
+                            <constraint firstItem="P3M-6z-x8S" firstAttribute="bottom" secondItem="cxg-0o-qoX" secondAttribute="bottom" id="zao-st-QDf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblNearestBeacon" destination="WEQ-ct-pIs" id="Oog-US-sDa"/>
+                        <outlet property="tblview" destination="cxg-0o-qoX" id="Ejr-XW-PYS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHS-b1-jMo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-349.27536231884062" y="-42.1875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
